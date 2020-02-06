@@ -29,11 +29,11 @@ function Villain () {
         controller.moveSprite(spaceship, 100 - 2 * info.score(), 100 - 2 * info.score())
     }
 }
-function Gameover () {
-    game.over(false)
-}
 function Score () {
     info.changeScoreBy(1)
+}
+function Gameover () {
+    game.over(false)
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     Gameover()
